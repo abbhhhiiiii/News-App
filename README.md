@@ -99,7 +99,7 @@ Steps:
 ## 🙋‍♂️ Author
 
 Made with ❤️ by **Abhishek Gupta**
-Let’s connect on [LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/abhishek-gupta-32a776285/)) or [GitHub](https://github.com/abbhhhiiiii)
+Let’s connect on [LinkedIn](https://www.linkedin.com/in/abhishek-gupta-32a776285/) or [GitHub](https://github.com/abbhhhiiiii)
 
 ---
 
