@@ -6,12 +6,14 @@ import PropTypes from 'prop-types';
 export class News extends Component {
   static defaultProps = {
     pageSize: 8,
-    category: 'general'
+    category: 'general',
+    countryCode: 'in'
   }
 
   static propTypes = {
     pageSize: PropTypes.number,
-    category: PropTypes.string
+    category: PropTypes.string,
+    countryCode: PropTypes.string
   }
 
   constructor() {
@@ -24,25 +26,32 @@ export class News extends Component {
     };
   }
 
-  async updateNews(pageNo) {
-    this.setState({ loading: true });
-    let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&apiKey=ed6e2272af60462dba92c3d600d08eb3&page=${pageNo}&pageSize=${this.props.pageSize}`;
-    let data = await fetch(url);
-    let parseData = await data.json();
-    this.setState({
-      articles: parseData.articles,
-      totalResults: parseData.totalResults,
-      loading: false,
-      page: pageNo
-    });
-  }
+ async updateNews(pageNo) {
+  console.log("Fetching page:", pageNo);
+  this.setState({ loading: true });
+
+  let url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=${this.props.countryCode}&max=${this.props.pageSize}&apikey=05742e604c676a4bdb9ef7d1e89d6ba6&page=${pageNo}`;
+  
+  let data = await fetch(url);
+  let parseData = await data.json();
+  console.log("API Response:", parseData);
+
+  this.setState({
+    articles: parseData.articles || [],
+    totalResults: parseData.totalArticles || 0,
+    loading: false,
+    page: pageNo
+  });
+}
 
   async componentDidMount() {
     this.updateNews(1);
   }
 
   handlePrevClick = () => {
-    this.updateNews(this.state.page - 1);
+    if (this.state.page > 1) {
+      this.updateNews(this.state.page - 1);
+    }
   }
 
   handleNextClick = () => {
@@ -61,13 +70,13 @@ export class News extends Component {
         {this.state.loading && <Spinner />}
 
         <div className="row">
-          {!this.state.loading && this.state.articles.map((element) => {
+          {!this.state.loading && this.state.articles && this.state.articles.map((element) => {
             return (
               <div className="col-md-4 mb-4" key={element.url}>
                 <NewsItem
                   title={element.title ? element.title.slice(0, 60) + "..." : ""}
                   description={element.description ? element.description.slice(0, 90) + "..." : ""}
-                  imageUrl={element.urlToImage}
+                  imageUrl={element.image} // ✅ GNews uses 'image' not 'urlToImage'
                   newsUrl={element.url}
                 />
               </div>
