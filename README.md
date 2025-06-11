@@ -1,6 +1,3 @@
-Sure bhai! Here's your polished **English** `README.md` file for your **React.js News App**, including the **live demo**:
-
----
 
 # 📰 News App (React.js)
 
