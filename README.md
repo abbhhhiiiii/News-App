@@ -55,10 +55,6 @@ yarn install
 
 Create a `.env` file in the root directory:
 
-```
-REACT_APP_NEWS_API_KEY=your_news_api_key_here
-```
-
 > Get your API key from [https://newsapi.org/](https://newsapi.org/)
 
 ### 4. Run the App
@@ -79,16 +75,6 @@ The app will be available at `http://localhost:3000`
 
 ---
 
-## 🖼️ Screenshots
-
-*(Replace these with your actual screenshots)*
-
-```md
-![Home Page](screenshots/home.png)
-![Search Results](screenshots/results.png)
-```
-
----
 
 ## 🚀 Future Improvements
 
@@ -110,12 +96,6 @@ Steps:
 2. Create a new branch: `git checkout -b feature/feature-name`
 3. Make your changes
 4. Submit a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
 
 ---
 
