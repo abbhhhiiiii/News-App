@@ -7,14 +7,14 @@
 
 ## 📌 Overview
 
-This is a responsive and modern **React.js News App** that displays the latest news articles using a public news API. Users can search for news by keywords and view article details like title, source, date, and image. The app is fast, user-friendly, and fully responsive.
+This News App is built using React.js and integrates the NewsAPI to fetch real-time news articles. It features multiple categories like Business, Entertainment, Sports, Technology, Health, and more, allowing users to browse top headlines easily. Users can search for news by country using a custom search bar instead of a dropdown menu. The app implements pagination, responsive design with Bootstrap, and a clean, professional UI for better readability. It offers dynamic routing with React Router to ensure seamless navigation between different news categories.
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Frontend Framework:** React.js
-* **Styling:** CSS / Tailwind CSS / Bootstrap (based on your setup)
+* **Styling:** CSS / Bootstrap
 * **API:** News API (e.g., [newsapi.org](https://newsapi.org))
 * **Deployment:** Vercel
 
