@@ -101,7 +101,5 @@ Steps:
 Made with ❤️ by **Abhishek Gupta**
 Let’s connect on [LinkedIn](https://www.linkedin.com/in/abhishek-gupta-32a776285/) or [GitHub](https://github.com/abbhhhiiiii)
 
----
 
-Let me know if you'd like a version with badges, better formatting, or if you're using Tailwind/Bootstrap so I can tweak it further!
 
